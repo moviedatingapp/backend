@@ -39,4 +39,6 @@ CORS(app)
 jwt=JWTManager(app)
 
 if __name__=='__main__':
+    print("hello working")
+    print("tatti")
     app.run(debug=True,port=5000)
