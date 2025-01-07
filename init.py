@@ -1,4 +1,4 @@
-from application.models import db,User
+from application.models import db,AuthUser
 from main import create_app
 import bcrypt
 from datetime import datetime

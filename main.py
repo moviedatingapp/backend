@@ -1,9 +1,10 @@
 from flask import Flask, jsonify
-from application.models import db, User, Genre, Match, Movie, UserMoviePreference, Chat, Report
+from application.models import db, AuthUser, UserProfile, Genre, Match, Movie, UserMoviePreference, Chat, Report
 from application.config import LocalDev
 from flask_restful import Resource, Api
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
+from application.api import SignUp
 
 app = None
 api = None
@@ -37,6 +38,8 @@ app, api=create_app()
 
 CORS(app)
 jwt=JWTManager(app)
+
+api.add_resource(SignUp, '/signup')
 
 if __name__=='__main__':
     print("hello working")

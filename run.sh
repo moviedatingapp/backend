@@ -11,10 +11,10 @@ else
 fi
 
 
-# rm instance/db.sqlite3
-# python3 init.py
+rm instance/db.sqlite3
+python3 init.py
 
-python3 main.py
+# python3 main.py
 
 # deactivate
 # echo 'DEACTIVATED'
